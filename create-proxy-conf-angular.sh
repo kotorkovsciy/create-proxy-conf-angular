@@ -65,27 +65,20 @@ key="$1"
 
 case $key in
     -h|--help)
-    echo "script for configure proxy for angular"
-    echo "example file"
-    echo "bash ./create-proxy-conf-angular.sh -c -p ./proxy.conf.json -t http://localhost:5000 -ur /api"
-    echo "{
-  \"/api\": {
-    \"target\": \"http://api.example.com\",
-    \"secure\": false
-  }
-}"
-    echo "-h, --help: show help"
-    echo "-e, --examples: show examples"
-    echo "-p, --path: path to proxy configuration file (default: ./proxy.conf.json)"
-    echo "-t, --target: target url (default: http://localhost:8080)"
-    echo "-s, --secure: secure flag (default: false)"
-    echo "-c, --create: create proxy configuration file"
-    echo "-u, --update: update proxy configuration file"
-    echo "-ur, --url: ur (default: /api)"
-    echo "-prO, --pathRewriteOld: path rewrite old"
-    echo "-prN, --pathRewriteNew: path rewrite new"
-    echo "-co, --changeOrigin: change origin"
-    echo "-ll, --logLevel: log level"
+    echo "Usage: bash ./create-proxy-conf-angular.sh [-c|-u] [-p <path>] [-t <target>] [-s <secure>] [-ur <url>] [-prO <pathRewriteOld>] [-prN <pathRewriteNew>] [-co <changeOrigin>] [-ll <logLevel>]"
+    echo "Options:"
+    echo "  -h, --help            show brief help"
+    echo "  -e, --examples        show examples"
+    echo "  -c, --create          create file"
+    echo "  -u, --update          update file"
+    echo "  -p, --path            path to file"
+    echo "  -t, --target          target"
+    echo "  -s, --secure          secure"
+    echo "  -ur, --url            url"
+    echo "  -prO, --pathRewriteOld  pathRewriteOld"
+    echo "  -prN, --pathRewriteNew  pathRewriteNew"
+    echo "  -co, --changeOrigin   changeOrigin"
+    echo "  -ll, --logLevel       logLevel"
     exit 0
     ;;
     -e|--examples)
