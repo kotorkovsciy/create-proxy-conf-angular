@@ -59,19 +59,21 @@ $ bash ./create-proxy-conf-angular.sh -h
 ```
 #### Output
 ```bash
-Usage: create-proxy-conf-angular.sh [-c|-u] [-p <path>] [-t <target>] [-ur <url>] [-prO <pathRegexOld>] [-prN <pathRegexNew>] [-co <changeOrigin>] [-ll <logLevel>]
+Usage: bash ./create-proxy-conf-angular.sh [-c|-u] [-p <path>] [-t <target>] [-s <secure>] [-ur <url>] [-prO <pathRewriteOld>] [-prN <pathRewriteNew>] [-co <changeOrigin>] [-ll <logLevel>]
 
 Options:
-    -c, --create            Create file
-    -u, --update            Update file
-    -p, --path              Path of file
-    -t, --target            Target of proxy
-    -ur, --url              Url of proxy
-    -prO, --pathRegexOld    Path regex old of proxy
-    -prN, --pathRegexNew    Path regex new of proxy
-    -co, --changeOrigin     Change origin of proxy
-    -ll, --logLevel         Log level of proxy
-    -h, --help              Show this help
+  -h, --help            show brief help
+  -e, --examples        show examples
+  -c, --create          create file
+  -u, --update          update file
+  -p, --path            path to file
+  -t, --target          target
+  -s, --secure          secure
+  -ur, --url            url
+  -prO, --pathRewriteOld  pathRewriteOld
+  -prN, --pathRewriteNew  pathRewriteNew
+  -co, --changeOrigin   changeOrigin
+  -ll, --logLevel       logLevel
 ```
 
 ## License
