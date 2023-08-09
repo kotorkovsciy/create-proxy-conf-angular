@@ -4,12 +4,15 @@
 
 # example of working with a script
 # create file
-# bash ./create-proxy-conf-angular.sh -c -p ./proxy.conf.json -t http://localhost:5000 -ur /api
+# bash ./create-proxy-conf-angular.sh -c -p ./proxy.conf.json -t http://localhost:5000 -ur /api -prO "^/api" -prN ""
 # output
 # {
 #   "/api": {
 #     "target": "http://localhost:5000",
-#     "secure": false
+#     "secure": false,
+#     "pathRewrite": {
+#       "^/api": ""
+#     }
 #   }
 # }
 # update file
@@ -84,12 +87,15 @@ case $key in
     -e|--examples)
     echo "example of working with a script"
     echo "create file"
-    echo "bash ./create-proxy-conf-angular.sh -c -p ./proxy.conf.json -t http://localhost:5000 -ur /api"
+    echo "bash ./create-proxy-conf-angular.sh -c -p ./proxy.conf.json -t http://localhost:5000 -ur /api -prO \"^/api\" -prN \"\""
     echo "output"
     echo "{
     \"/api\": {
         \"target\": \"http://localhost:5000\",
-        \"secure\": false
+        \"secure\": false,
+        \"pathRewrite\": {
+        \"^/api\": \"\"
+        }
     }
 }"
     echo "update file"
